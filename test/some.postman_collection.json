@@ -1,0 +1,1921 @@
+{
+  "info": {
+    "_postman_id": "ff4647b3-626f-4d3f-adec-55ad54805a55",
+    "name": "Some collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all owned NFTs",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "{{bearer}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{client}}/{{network}}/nft/getOwned",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "{{client}}",
+            "{{network}}",
+            "nft",
+            "getOwned"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "network not correct",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "xxx",
+                "type": "default",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/:client/:network/nft/all",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                ":client",
+                ":network",
+                "nft",
+                "all"
+              ],
+              "variable": [
+                {
+                  "key": "client",
+                  "value": ""
+                },
+                {
+                  "key": "network",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "126"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"7e-u3LM2q7v6tC4qBXmsNPjxDtYIi0\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 12 Jun 2023 14:41:25 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"errors\": [\n        {\n            \"type\": \"field\",\n            \"value\": \"tesnet\",\n            \"msg\": \"network must be testnet or mainnet\",\n            \"path\": \"network\",\n            \"location\": \"params\"\n        }\n    ]\n}"
+        },
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "Bearer xxx",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/:client/:network/nft/all",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                ":client",
+                ":network",
+                "nft",
+                "all"
+              ],
+              "variable": [
+                {
+                  "key": "client",
+                  "value": ""
+                },
+                {
+                  "key": "network",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "5939"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1733-niKGeQEgrMul7EYaHufRGLTp7c0\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 15 Jun 2023 14:22:19 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"data\": {\n            \"certificateId\": \"287574096\",\n            \"content\": {\n                \"language\": \"en-US\",\n                \"i18n\": [],\n                \"$schema\": \"https://cert.remote.org/version5/RemoteProductCertificate-i18n.json\",\n                \"name\": \"King Smurf\",\n                \"medias\": [\n                    {\n                        \"mediaType\": \"picture\",\n                        \"type\": \"product\",\n                        \"url\": \"https://bdh-stef.api.staging.remote.com/pub/1682666238271-tss_logo_king.png\"\n                    }\n                ],\n                \"parentCertificates\": [\n                    {\n                        \"type\": \"Full\",\n                        \"remoteLink\": \"https://test.remote.net/2855435,0ry35uk9pmcw\"\n                    }\n                ],\n                \"customAttributes\": [\n                    {\n                        \"type\": \"deferred_claim\",\n                        \"value\": \"https://bdh-stef.api.staging.remote.com\"\n                    }\n                ]\n            },\n            \"rawContent\": {\n                \"language\": \"en-US\",\n                \"i18n\": [],\n                \"$schema\": \"https://cert.remote.org/version5/RemoteProductCertificate-i18n.json\",\n                \"name\": \"King Smurf\",\n                \"medias\": [\n                    {\n                        \"mediaType\": \"picture\",\n                        \"type\": \"product\",\n                        \"url\": \"https://bdh-stef.api.staging.remote.com/pub/1682666238271-tss_logo_king.png\"\n                    }\n                ],\n                \"parentCertificates\": [\n                    {\n                        \"type\": \"Full\",\n                        \"remoteLink\": \"https://test.remote.net/2855435,0ry35uk9pmcw\"\n                    }\n                ],\n                \"customAttributes\": [\n                    {\n                        \"type\": \"deferred_claim\",\n                        \"value\": \"https://bdh-stef.api.staging.remote.com\"\n                    }\n                ]\n            },\n            \"blockchainEvents\": [\n                {\n                    \"isSentToWebhook\": true,\n                    \"_id\": \"648a1b0fac32e0af12c68555\",\n                    \"blockNumber\": 30578604,\n                    \"eventName\": \"Transfer\",\n                    \"eventData\": {\n                        \"address\": \"0x512C1FCF401133680f373a386F3f752b98070BC5\",\n                        \"blockHash\": \"0xf4ba8cd65c311a4eba9d84d371b62d4df3ab856b65f17b73184d185858803075\",\n                        \"blockNumber\": 30578604,\n                        \"logIndex\": 1,\n                        \"removed\": false,\n                        \"transactionHash\": \"0x3d70cd7c8e6414139773b7c09e9657b01c97562cddc49efc7a59e8d6b3b73a54\",\n                        \"transactionIndex\": 0,\n                        \"transactionLogIndex\": \"0x1\",\n                        \"id\": \"log_25f9461d\",\n                        \"returnValues\": {\n                            \"0\": \"0x0000000000000000000000000000000000000000\",\n                            \"1\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                            \"2\": \"287574096\",\n                            \"_from\": \"0x0000000000000000000000000000000000000000\",\n                            \"_to\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                            \"_tokenId\": \"287574096\"\n                        },\n                        \"event\": \"Transfer\",\n                        \"signature\": \"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\",\n                        \"raw\": {\n                            \"data\": \"0x\",\n                            \"topics\": [\n                                \"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\",\n                                \"0x0000000000000000000000000000000000000000000000000000000000000000\",\n                                \"0x00000000000000000000000057f5111a7e997a7ba63cc8976c92decbd86c1b08\",\n                                \"0x0000000000000000000000000000000000000000000000000000000011240850\"\n                            ]\n                        }\n                    },\n                    \"returnValues\": {\n                        \"0\": \"0x0000000000000000000000000000000000000000\",\n                        \"1\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                        \"2\": \"287574096\",\n                        \"_from\": \"0x0000000000000000000000000000000000000000\",\n                        \"_to\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                        \"_tokenId\": \"287574096\"\n                    },\n                    \"logBloom\": \"0x000000000008000c0000000000100000000000100000000000000004000004000000000000000000000000000004000082010000000000000000000010004000000000000000001000000008040000000010000000000000000010000000000010800000020080000000020000000800000080000100010104200010210020000000000000000000000000000000000004000000000000400000000001000000800000000200000200000000000000002000000000000000000000000000000800000002000000000000000800000000801000100044000000000000000020040000000000008000000000000000000a00804006020014000001000000000001\",\n                    \"timestamp\": 1686772495,\n                    \"logIndex\": 1,\n                    \"transactionHash\": \"0x3d70cd7c8e6414139773b7c09e9657b01c97562cddc49efc7a59e8d6b3b73a54\",\n                    \"eventHash\": \"dab38b2fd5a9bdf386e5618872e25da239d9c38c\",\n                    \"smartContractName\": \"smartAssetContract\",\n                    \"contractAddress\": \"0x512c1fcf401133680f373a386f3f752b98070bc5\",\n                    \"chainId\": 77,\n                    \"network\": \"testnet\",\n                    \"createdAt\": \"2023-06-14T19:54:55.712Z\",\n                    \"updatedAt\": \"2023-06-14T19:54:56.675Z\",\n                    \"__v\": 0\n                },\n                {\n                    \"isSentToWebhook\": true,\n                    \"_id\": \"648acb8bac32e008b2c6a96c\",\n                    \"blockNumber\": 30587640,\n                    \"eventName\": \"Transfer\",\n                    \"eventData\": {\n                        \"address\": \"0x512C1FCF401133680f373a386F3f752b98070BC5\",\n                        \"blockHash\": \"0x392992158ab4d65ca52c2b8a9369a095dc57b505b93e65d53069fc9f55f62327\",\n                        \"blockNumber\": 30587640,\n                        \"logIndex\": 1,\n                        \"removed\": false,\n                        \"transactionHash\": \"0x328c52075c65ba2831e3d1a668089a7bd3ac1be75b5dfac310e79aea76f27ff5\",\n                        \"transactionIndex\": 1,\n                        \"transactionLogIndex\": \"0x0\",\n                        \"id\": \"log_356cb4ff\",\n                        \"returnValues\": {\n                            \"0\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                            \"1\": \"0xa45D9DACBeA470CF93E8454aca5EcA4E62fB5FCf\",\n                            \"2\": \"287574096\",\n                            \"_from\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                            \"_to\": \"0xa45D9DACBeA470CF93E8454aca5EcA4E62fB5FCf\",\n                            \"_tokenId\": \"287574096\"\n                        },\n                        \"event\": \"Transfer\",\n                        \"signature\": \"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\",\n                        \"raw\": {\n                            \"data\": \"0x\",\n                            \"topics\": [\n                                \"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\",\n                                \"0x00000000000000000000000057f5111a7e997a7ba63cc8976c92decbd86c1b08\",\n                                \"0x000000000000000000000000a45d9dacbea470cf93e8454aca5eca4e62fb5fcf\",\n                                \"0x0000000000000000000000000000000000000000000000000000000011240850\"\n                            ]\n                        }\n                    },\n                    \"returnValues\": {\n                        \"0\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                        \"1\": \"0xa45D9DACBeA470CF93E8454aca5EcA4E62fB5FCf\",\n                        \"2\": \"287574096\",\n                        \"_from\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                        \"_to\": \"0xa45D9DACBeA470CF93E8454aca5EcA4E62fB5FCf\",\n                        \"_tokenId\": \"287574096\"\n                    },\n                    \"logBloom\": \"0x00000000000800080000000000000000000000000000000000000004000000000000000000000000000000200000000000010000000000000000000010004000000000000000001000000008000000000000000000000000000000000000000000000000001000000000000000000000000000000000000004200010000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000800000002000100000000010000000000000000000000000000000000000000000000040000000000000000000000000000000004020010000000000000000001\",\n                    \"timestamp\": 1686817675,\n                    \"logIndex\": 1,\n                    \"transactionHash\": \"0x328c52075c65ba2831e3d1a668089a7bd3ac1be75b5dfac310e79aea76f27ff5\",\n                    \"eventHash\": \"329dd6cdc262b14fc65c60a103d10c7d41e406be\",\n                    \"smartContractName\": \"smartAssetContract\",\n                    \"contractAddress\": \"0x512c1fcf401133680f373a386f3f752b98070bc5\",\n                    \"chainId\": 77,\n                    \"network\": \"testnet\",\n                    \"createdAt\": \"2023-06-15T08:27:55.399Z\",\n                    \"updatedAt\": \"2023-06-15T08:27:55.878Z\",\n                    \"__v\": 0\n                }\n            ],\n            \"imprint\": \"0xff1536b7bb96a5134c4b48963741b54be9214b201ee7cc855717792b32848e2a\",\n            \"isAuthentic\": true,\n            \"isRequestable\": false,\n            \"issuer\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n            \"owner\": \"0xa45d9dacbea470cf93e8454aca5eca4e62fb5fcf\",\n            \"protocol\": {\n                \"name\": \"testnet\",\n                \"chainId\": 77\n            }\n        },\n        \"remoteEvents\": []\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Message By Id",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "{{bearer}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": \"617768167\",\n    \"protocolName\": \"testnet\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/:client/:network/messages/get",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            ":client",
+            ":network",
+            "messages",
+            "get"
+          ],
+          "variable": [
+            {
+              "key": "client",
+              "value": ""
+            },
+            {
+              "key": "network",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "bad body",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "Bearer xxx",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/:client/:network/messages/get",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                ":client",
+                ":network",
+                "messages",
+                "get"
+              ],
+              "variable": [
+                {
+                  "key": "client",
+                  "value": ""
+                },
+                {
+                  "key": "network",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "382"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"17e-MPXiQ1pub4QWvUUC0H2jxzHEez8\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 15 Jun 2023 14:27:44 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"errors\": [\n        {\n            \"type\": \"field\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"id\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"msg\": \"id parameter is required and must be a string\",\n            \"path\": \"id\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"protocolName\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"msg\": \"protocolName parameter is required and must be a string\",\n            \"path\": \"protocolName\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+        },
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "Bearer xxx",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"617768167\",\n    \"protocolName\": \"testnet\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/:client/:network/messages/get",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                ":client",
+                ":network",
+                "messages",
+                "get"
+              ],
+              "variable": [
+                {
+                  "key": "client",
+                  "value": ""
+                },
+                {
+                  "key": "network",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "621"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"26d-+BIpABaOsc3/MA0BeRc0SFOK2gU\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 15 Jun 2023 14:31:38 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": {\n        \"id\": \"617768167\",\n        \"certificateId\": \"287574096\",\n        \"content\": {\n            \"$schema\": \"https://cert.remote.org/version1/RemoteMessage-i18n.json\",\n            \"language\": \"en-US\",\n            \"title\": \"Welcome to Remote NFTs\",\n            \"content\": \" Test automessage 25/04 15:38\"\n        },\n        \"rawContent\": {\n            \"$schema\": \"https://cert.remote.org/version1/RemoteMessage-i18n.json\",\n            \"language\": \"en-US\",\n            \"title\": \"Welcome to Remote NFTs\",\n            \"content\": \" Test automessage 25/04 15:38\"\n        },\n        \"imprint\": \"TODO\",\n        \"isRead\": true,\n        \"protocol\": {\n            \"name\": \"testnet\",\n            \"chainId\": 77\n        },\n        \"receiver\": \"0xa45d9dacbea470cf93e8454aca5eca4e62fb5fcf\",\n        \"sender\": \"0x57f5111a7e997a7ba63cc8976c92decbd86c1b08\",\n        \"timestamp\": 1686817705\n    }\n}"
+        },
+        {
+          "name": "Not found",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "Bearer xxx",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"617768169\",\n    \"protocolName\": \"testnet\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/:client/:network/messages/get",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                ":client",
+                ":network",
+                "messages",
+                "get"
+              ],
+              "variable": [
+                {
+                  "key": "client",
+                  "value": ""
+                },
+                {
+                  "key": "network",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "_postman_previewlanguage": "html",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/html; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "58"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3a-7M7tWR0M8drj59/3FDLbFQ5CKew\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 15 Jun 2023 14:33:14 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "Failed to fetch message: Error fetching message: Not Found"
+        }
+      ]
+    },
+    {
+      "name": "Get All Messages Received",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "{{bearer}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{url}}/:client/:network/messages/getReceived",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            ":client",
+            ":network",
+            "messages",
+            "getReceived"
+          ],
+          "variable": [
+            {
+              "key": "client",
+              "value": ""
+            },
+            {
+              "key": "network",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "Bearer xxx",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/:client/:network/messages/getReceived",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                ":client",
+                ":network",
+                "messages",
+                "getReceived"
+              ],
+              "variable": [
+                {
+                  "key": "client",
+                  "value": ""
+                },
+                {
+                  "key": "network",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "623"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"26f-hXoe6gfyOEcbA3WkgN/ORSwMUp4\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 15 Jun 2023 14:30:08 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"data\": {\n            \"id\": \"617768167\",\n            \"certificateId\": \"287574096\",\n            \"content\": {\n                \"$schema\": \"https://cert.remote.org/version1/RemoteMessage-i18n.json\",\n                \"language\": \"en-US\",\n                \"title\": \"Welcome to Remote NFTs\",\n                \"content\": \" Test automessage 25/04 15:38\"\n            },\n            \"rawContent\": {\n                \"$schema\": \"https://cert.remote.org/version1/RemoteMessage-i18n.json\",\n                \"language\": \"en-US\",\n                \"title\": \"Welcome to Remote NFTs\",\n                \"content\": \" Test automessage 25/04 15:38\"\n            },\n            \"imprint\": \"TODO\",\n            \"isRead\": true,\n            \"protocol\": {\n                \"name\": \"testnet\",\n                \"chainId\": 77\n            },\n            \"receiver\": \"0xa45d9dacbea470cf93e8454aca5eca4e62fb5fcf\",\n            \"sender\": \"0x57f5111a7e997a7ba63cc8976c92decbd86c1b08\",\n            \"timestamp\": 1686817705\n        }\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Identity by issuer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "{{bearer}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"issuer\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/:client/:network/identity/get",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            ":client",
+            ":network",
+            "identity",
+            "get"
+          ],
+          "variable": [
+            {
+              "key": "client",
+              "value": ""
+            },
+            {
+              "key": "network",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "bad request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"issuer\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/:client/:network/identity/get",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                ":client",
+                ":network",
+                "identity",
+                "get"
+              ],
+              "variable": [
+                {
+                  "key": "client",
+                  "value": ""
+                },
+                {
+                  "key": "network",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "184"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"b8-3cQiS98rXjaUTTW2KkkGreCRI3E\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 16 Jun 2023 08:32:48 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"errors\": [\n        {\n            \"type\": \"field\",\n            \"value\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B0\",\n            \"msg\": \"issuer parameter is required and must be an ethereum address\",\n            \"path\": \"issuer\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+        },
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"issuer\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/testclient/testnet/identity/get",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "testclient",
+                "testnet",
+                "identity",
+                "get"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "689"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2b1-gchVStej2pGjAqtyjOofUwW6mJw\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 16 Jun 2023 08:34:22 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": {\n        \"address\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n        \"imprint\": \"0xdfee9c6b92e2cb9a5fc6b4b394f46926510fc66db9faa694c53c61d4307cf883\",\n        \"isApproved\": true,\n        \"isAuthentic\": true,\n        \"content\": {\n            \"$schema\": \"https://cert.remote.org/version2/RemoteBrandIdentity-i18n.json\",\n            \"name\": \"BDH STEF\",\n            \"companyName\": \"Remote\",\n            \"remoteMembership\": \"associate_member\",\n            \"rpcEndpoint\": \"https://bdh-stef.api.staging.remote.com/rpc\"\n        },\n        \"rawContent\": {\n            \"$schema\": \"https://cert.remote.org/version2/RemoteBrandIdentity-i18n.json\",\n            \"name\": \"BDH STEF\",\n            \"companyName\": \"Remote\",\n            \"remoteMembership\": \"associate_member\",\n            \"rpcEndpoint\": \"https://bdh-stef.api.staging.remote.com/rpc\"\n        },\n        \"protocol\": {\n            \"name\": \"testnet\",\n            \"chainId\": 77\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Identity of all NFTs ",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "{{bearer}}",
+            "type": "default"
+          }
+        ],
+        "url": {
+          "raw": "{{url}}/:client/:network/identity/getOwnedSmartAssetsIdentities",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            ":client",
+            ":network",
+            "identity",
+            "getOwnedSmartAssetsIdentities"
+          ],
+          "variable": [
+            {
+              "key": "client",
+              "value": ""
+            },
+            {
+              "key": "network",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/:client/:network/identity/getOwnedSmartAssetsIdentities",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                ":client",
+                ":network",
+                "identity",
+                "getOwnedSmartAssetsIdentities"
+              ],
+              "variable": [
+                {
+                  "key": "client",
+                  "value": ""
+                },
+                {
+                  "key": "network",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "706"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2c2-MJRmrivWfOA6ztwEFgwnQgCm9hg\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 16 Jun 2023 08:27:35 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"data\": {\n            \"address\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n            \"imprint\": \"0xdfee9c6b92e2cb9a5fc6b4b394f46926510fc66db9faa694c53c61d4307cf883\",\n            \"isApproved\": true,\n            \"isAuthentic\": true,\n            \"content\": {\n                \"$schema\": \"https://cert.remote.org/version2/RemoteBrandIdentity-i18n.json\",\n                \"name\": \"BDH STEF\",\n                \"companyName\": \"Remote\",\n                \"remoteMembership\": \"associate_member\",\n                \"rpcEndpoint\": \"https://bdh-stef.api.staging.remote.com/rpc\"\n            },\n            \"rawContent\": {\n                \"$schema\": \"https://cert.remote.org/version2/RemoteBrandIdentity-i18n.json\",\n                \"name\": \"BDH STEF\",\n                \"companyName\": \"Remote\",\n                \"remoteMembership\": \"associate_member\",\n                \"rpcEndpoint\": \"https://bdh-stef.api.staging.remote.com/rpc\"\n            },\n            \"protocol\": {\n                \"name\": \"testnet\",\n                \"chainId\": 77\n            },\n            \"ownedCount\": 1\n        }\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get detail of one NFT",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "{{bearer}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"protocolName\": \"testnet\",\n    \"smartAsset\": {\n        \"id\": \"287574096\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{client}}/{{network}}/nft/get",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "{{client}}",
+            "{{network}}",
+            "nft",
+            "get"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "bad request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"protocolName\": \"testnet\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/{{client}}/{{network}}/nft/get",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "{{client}}",
+                "{{network}}",
+                "nft",
+                "get"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "410"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"19a-aCKmtvNx3vssQt8Jl0cMjuvyyXg\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 16 Jun 2023 09:12:37 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"errors\": [\n        {\n            \"type\": \"field\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"smartAsset\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"msg\": \"smartAsset parameter is required and must be an object\",\n            \"path\": \"smartAsset\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"smartAsset.id\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"msg\": \"smartAsset.id parameter is required and must be a string\",\n            \"path\": \"smartAsset.id\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+        },
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"protocolName\": \"testnet\",\n    \"smartAsset\": {\n        \"id\": \"287574096\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/{{client}}/{{network}}/nft/get",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "{{client}}",
+                "{{network}}",
+                "nft",
+                "get"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "5937"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1731-eJA+o9KF6DHst8E7PmGccE7A/3Q\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 16 Jun 2023 09:13:32 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": {\n        \"certificateId\": \"287574096\",\n        \"content\": {\n            \"language\": \"en-US\",\n            \"i18n\": [],\n            \"$schema\": \"https://cert.remote.org/version5/RemoteProductCertificate-i18n.json\",\n            \"name\": \"King Smurf\",\n            \"medias\": [\n                {\n                    \"mediaType\": \"picture\",\n                    \"type\": \"product\",\n                    \"url\": \"https://bdh-stef.api.staging.remote.com/pub/1682666238271-tss_logo_king.png\"\n                }\n            ],\n            \"parentCertificates\": [\n                {\n                    \"type\": \"Full\",\n                    \"remoteLink\": \"https://test.remote.net/2855435,0ry35uk9pmcw\"\n                }\n            ],\n            \"customAttributes\": [\n                {\n                    \"type\": \"deferred_claim\",\n                    \"value\": \"https://bdh-stef.api.staging.remote.com\"\n                }\n            ]\n        },\n        \"rawContent\": {\n            \"language\": \"en-US\",\n            \"i18n\": [],\n            \"$schema\": \"https://cert.remote.org/version5/RemoteProductCertificate-i18n.json\",\n            \"name\": \"King Smurf\",\n            \"medias\": [\n                {\n                    \"mediaType\": \"picture\",\n                    \"type\": \"product\",\n                    \"url\": \"https://bdh-stef.api.staging.remote.com/pub/1682666238271-tss_logo_king.png\"\n                }\n            ],\n            \"parentCertificates\": [\n                {\n                    \"type\": \"Full\",\n                    \"remoteLink\": \"https://test.remote.net/2855435,0ry35uk9pmcw\"\n                }\n            ],\n            \"customAttributes\": [\n                {\n                    \"type\": \"deferred_claim\",\n                    \"value\": \"https://bdh-stef.api.staging.remote.com\"\n                }\n            ]\n        },\n        \"blockchainEvents\": [\n            {\n                \"isSentToWebhook\": true,\n                \"_id\": \"648a1b0fac32e0af12c68555\",\n                \"blockNumber\": 30578604,\n                \"eventName\": \"Transfer\",\n                \"eventData\": {\n                    \"address\": \"0x512C1FCF401133680f373a386F3f752b98070BC5\",\n                    \"blockHash\": \"0xf4ba8cd65c311a4eba9d84d371b62d4df3ab856b65f17b73184d185858803075\",\n                    \"blockNumber\": 30578604,\n                    \"logIndex\": 1,\n                    \"removed\": false,\n                    \"transactionHash\": \"0x3d70cd7c8e6414139773b7c09e9657b01c97562cddc49efc7a59e8d6b3b73a54\",\n                    \"transactionIndex\": 0,\n                    \"transactionLogIndex\": \"0x1\",\n                    \"id\": \"log_25f9461d\",\n                    \"returnValues\": {\n                        \"0\": \"0x0000000000000000000000000000000000000000\",\n                        \"1\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                        \"2\": \"287574096\",\n                        \"_from\": \"0x0000000000000000000000000000000000000000\",\n                        \"_to\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                        \"_tokenId\": \"287574096\"\n                    },\n                    \"event\": \"Transfer\",\n                    \"signature\": \"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\",\n                    \"raw\": {\n                        \"data\": \"0x\",\n                        \"topics\": [\n                            \"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\",\n                            \"0x0000000000000000000000000000000000000000000000000000000000000000\",\n                            \"0x00000000000000000000000057f5111a7e997a7ba63cc8976c92decbd86c1b08\",\n                            \"0x0000000000000000000000000000000000000000000000000000000011240850\"\n                        ]\n                    }\n                },\n                \"returnValues\": {\n                    \"0\": \"0x0000000000000000000000000000000000000000\",\n                    \"1\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                    \"2\": \"287574096\",\n                    \"_from\": \"0x0000000000000000000000000000000000000000\",\n                    \"_to\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                    \"_tokenId\": \"287574096\"\n                },\n                \"logBloom\": \"0x000000000008000c0000000000100000000000100000000000000004000004000000000000000000000000000004000082010000000000000000000010004000000000000000001000000008040000000010000000000000000010000000000010800000020080000000020000000800000080000100010104200010210020000000000000000000000000000000000004000000000000400000000001000000800000000200000200000000000000002000000000000000000000000000000800000002000000000000000800000000801000100044000000000000000020040000000000008000000000000000000a00804006020014000001000000000001\",\n                \"timestamp\": 1686772495,\n                \"logIndex\": 1,\n                \"transactionHash\": \"0x3d70cd7c8e6414139773b7c09e9657b01c97562cddc49efc7a59e8d6b3b73a54\",\n                \"eventHash\": \"dab38b2fd5a9bdf386e5618872e25da239d9c38c\",\n                \"smartContractName\": \"smartAssetContract\",\n                \"contractAddress\": \"0x512c1fcf401133680f373a386f3f752b98070bc5\",\n                \"chainId\": 77,\n                \"network\": \"testnet\",\n                \"createdAt\": \"2023-06-14T19:54:55.712Z\",\n                \"updatedAt\": \"2023-06-14T19:54:56.675Z\",\n                \"__v\": 0\n            },\n            {\n                \"isSentToWebhook\": true,\n                \"_id\": \"648acb8bac32e008b2c6a96c\",\n                \"blockNumber\": 30587640,\n                \"eventName\": \"Transfer\",\n                \"eventData\": {\n                    \"address\": \"0x512C1FCF401133680f373a386F3f752b98070BC5\",\n                    \"blockHash\": \"0x392992158ab4d65ca52c2b8a9369a095dc57b505b93e65d53069fc9f55f62327\",\n                    \"blockNumber\": 30587640,\n                    \"logIndex\": 1,\n                    \"removed\": false,\n                    \"transactionHash\": \"0x328c52075c65ba2831e3d1a668089a7bd3ac1be75b5dfac310e79aea76f27ff5\",\n                    \"transactionIndex\": 1,\n                    \"transactionLogIndex\": \"0x0\",\n                    \"id\": \"log_356cb4ff\",\n                    \"returnValues\": {\n                        \"0\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                        \"1\": \"0xa45D9DACBeA470CF93E8454aca5EcA4E62fB5FCf\",\n                        \"2\": \"287574096\",\n                        \"_from\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                        \"_to\": \"0xa45D9DACBeA470CF93E8454aca5EcA4E62fB5FCf\",\n                        \"_tokenId\": \"287574096\"\n                    },\n                    \"event\": \"Transfer\",\n                    \"signature\": \"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\",\n                    \"raw\": {\n                        \"data\": \"0x\",\n                        \"topics\": [\n                            \"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\",\n                            \"0x00000000000000000000000057f5111a7e997a7ba63cc8976c92decbd86c1b08\",\n                            \"0x000000000000000000000000a45d9dacbea470cf93e8454aca5eca4e62fb5fcf\",\n                            \"0x0000000000000000000000000000000000000000000000000000000011240850\"\n                        ]\n                    }\n                },\n                \"returnValues\": {\n                    \"0\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                    \"1\": \"0xa45D9DACBeA470CF93E8454aca5EcA4E62fB5FCf\",\n                    \"2\": \"287574096\",\n                    \"_from\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                    \"_to\": \"0xa45D9DACBeA470CF93E8454aca5EcA4E62fB5FCf\",\n                    \"_tokenId\": \"287574096\"\n                },\n                \"logBloom\": \"0x00000000000800080000000000000000000000000000000000000004000000000000000000000000000000200000000000010000000000000000000010004000000000000000001000000008000000000000000000000000000000000000000000000000001000000000000000000000000000000000000004200010000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000800000002000100000000010000000000000000000000000000000000000000000000040000000000000000000000000000000004020010000000000000000001\",\n                \"timestamp\": 1686817675,\n                \"logIndex\": 1,\n                \"transactionHash\": \"0x328c52075c65ba2831e3d1a668089a7bd3ac1be75b5dfac310e79aea76f27ff5\",\n                \"eventHash\": \"329dd6cdc262b14fc65c60a103d10c7d41e406be\",\n                \"smartContractName\": \"smartAssetContract\",\n                \"contractAddress\": \"0x512c1fcf401133680f373a386f3f752b98070bc5\",\n                \"chainId\": 77,\n                \"network\": \"testnet\",\n                \"createdAt\": \"2023-06-15T08:27:55.399Z\",\n                \"updatedAt\": \"2023-06-15T08:27:55.878Z\",\n                \"__v\": 0\n            }\n        ],\n        \"imprint\": \"0xff1536b7bb96a5134c4b48963741b54be9214b201ee7cc855717792b32848e2a\",\n        \"isAuthentic\": true,\n        \"isRequestable\": false,\n        \"issuer\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n        \"owner\": \"0xa45d9dacbea470cf93e8454aca5eca4e62fb5fcf\",\n        \"protocol\": {\n            \"name\": \"testnet\",\n            \"chainId\": 77\n        }\n    },\n    \"remoteEvents\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get NFT detail by link",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "{{bearer}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"link\": \"https://test.remote.net/2855435,0ry35uk9pmcw\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{client}}/{{network}}/nft/getFromLink",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "{{client}}",
+            "{{network}}",
+            "nft",
+            "getFromLink"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "bad request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/{{client}}/{{network}}/nft/getFromLink",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "{{client}}",
+                "{{network}}",
+                "nft",
+                "getFromLink"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "188"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"bc-T+U0Zd8ZORYh+gBk7Hxr4Mprc9g\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 16 Jun 2023 09:15:30 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"errors\": [\n        {\n            \"type\": \"field\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"link\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"msg\": \"link parameter is required and must be a string\",\n            \"path\": \"link\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+        },
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"link\": \"https://test.remote.net/2855435,0ry35uk9pmcw\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/{{client}}/{{network}}/nft/getFromLink",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "{{client}}",
+                "{{network}}",
+                "nft",
+                "getFromLink"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "3215"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c8f-/cDD8c/N3FX9yGnyIY4RvZriTN8\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 16 Jun 2023 09:32:03 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": {\n        \"certificateId\": \"2855435\",\n        \"content\": {\n            \"language\": \"en-US\",\n            \"i18n\": [],\n            \"$schema\": \"https://cert.remote.org/version5/RemoteProductCertificate-i18n.json\",\n            \"name\": \"King Smurf\",\n            \"medias\": [\n                {\n                    \"mediaType\": \"picture\",\n                    \"type\": \"product\",\n                    \"url\": \"https://bdh-stef.api.staging.remote.com/pub/1682666238271-tss_logo_king.png\"\n                }\n            ]\n        },\n        \"rawContent\": {\n            \"language\": \"en-US\",\n            \"i18n\": [],\n            \"$schema\": \"https://cert.remote.org/version5/RemoteProductCertificate-i18n.json\",\n            \"name\": \"King Smurf\",\n            \"medias\": [\n                {\n                    \"mediaType\": \"picture\",\n                    \"type\": \"product\",\n                    \"url\": \"https://bdh-stef.api.staging.remote.com/pub/1682666238271-tss_logo_king.png\"\n                }\n            ]\n        },\n        \"blockchainEvents\": [\n            {\n                \"isSentToWebhook\": true,\n                \"_id\": \"6489b728ac32e00110c60d38\",\n                \"blockNumber\": 30573489,\n                \"eventName\": \"Transfer\",\n                \"eventData\": {\n                    \"address\": \"0x512C1FCF401133680f373a386F3f752b98070BC5\",\n                    \"blockHash\": \"0xab5cecec112ce2e717358716df8af39c9df4f07dd661d50ffeebffd37076d1a9\",\n                    \"blockNumber\": 30573489,\n                    \"logIndex\": 1,\n                    \"removed\": false,\n                    \"transactionHash\": \"0x07eefe588f2e91f07125e965839991f8786a1c5cef4382575187bdfb9ff764df\",\n                    \"transactionIndex\": 0,\n                    \"transactionLogIndex\": \"0x1\",\n                    \"id\": \"log_7a9ee469\",\n                    \"returnValues\": {\n                        \"0\": \"0x0000000000000000000000000000000000000000\",\n                        \"1\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                        \"2\": \"2855435\",\n                        \"_from\": \"0x0000000000000000000000000000000000000000\",\n                        \"_to\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                        \"_tokenId\": \"2855435\"\n                    },\n                    \"event\": \"Transfer\",\n                    \"signature\": \"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\",\n                    \"raw\": {\n                        \"data\": \"0x\",\n                        \"topics\": [\n                            \"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\",\n                            \"0x0000000000000000000000000000000000000000000000000000000000000000\",\n                            \"0x00000000000000000000000057f5111a7e997a7ba63cc8976c92decbd86c1b08\",\n                            \"0x00000000000000000000000000000000000000000000000000000000002b920b\"\n                        ]\n                    }\n                },\n                \"returnValues\": {\n                    \"0\": \"0x0000000000000000000000000000000000000000\",\n                    \"1\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                    \"2\": \"2855435\",\n                    \"_from\": \"0x0000000000000000000000000000000000000000\",\n                    \"_to\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n                    \"_tokenId\": \"2855435\"\n                },\n                \"logBloom\": \"0x000000000000000c0000000000100000000000100000000000000004000004000000000000000000000000000004000000010000000000000000000010004000000000000000001000000008000000000010000000000000000000000000000000000000020000000000000000000820000000000000000004400010200020000000000000000000000000000000000004000000000000000000000001000000800000000200000000000000000000002000000000000000000000000000000800000002000000000000000800000000801000100040000000000000000024008000800000008000000000000000000800004004020014000000000000000000\",\n                \"timestamp\": 1686746920,\n                \"logIndex\": 1,\n                \"transactionHash\": \"0x07eefe588f2e91f07125e965839991f8786a1c5cef4382575187bdfb9ff764df\",\n                \"eventHash\": \"18f5917e8f0242afda7dde956a3cd8e111604f1d\",\n                \"smartContractName\": \"smartAssetContract\",\n                \"contractAddress\": \"0x512c1fcf401133680f373a386f3f752b98070bc5\",\n                \"chainId\": 77,\n                \"network\": \"testnet\",\n                \"createdAt\": \"2023-06-14T12:48:40.762Z\",\n                \"updatedAt\": \"2023-06-14T12:48:42.065Z\",\n                \"__v\": 0\n            }\n        ],\n        \"imprint\": \"0x29fe428abb74d3b86427ee617f244de8c50909f74882ce662047d1467e4fe0bc\",\n        \"isAuthentic\": true,\n        \"isRequestable\": false,\n        \"issuer\": \"0x57F5111A7e997a7Ba63CC8976C92decbd86C1B08\",\n        \"owner\": \"0x57f5111a7e997a7ba63cc8976c92decbd86c1b08\",\n        \"protocol\": {\n            \"name\": \"testnet\",\n            \"chainId\": 77\n        }\n    },\n    \"remoteEvents\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "Wallet Sign Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "{{bearer}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"message\": \"Buy Smurfs NFT\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{client}}/{{network}}/wallet/signMessage",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "{{client}}",
+            "{{network}}",
+            "wallet",
+            "signMessage"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"message\": \"Buy Smurfs NFT\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/{{client}}/{{network}}/wallet/signMessage",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "{{client}}",
+                "{{network}}",
+                "wallet",
+                "signMessage"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "175"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"af-1/x0ubzCmYNUtpXkZxXiAnORUAo\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 16 Jun 2023 14:19:00 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Buy Smurfs NFT\",\n    \"signature\": \"0xb6ba390e630a034de6b09a9c4ede9840172861b43636f074d5478a00fc3b0cd07bba9f24657b7dce8f21a92570eddc5fb8ae94028e3980e6e9ef061c1b0d09ea1c\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Wallet Sign transaction",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "{{bearer}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\": 0,\n  \"to\": \"0x5360DbFF3546b920431A20268D2B5DFf8bF9b4dD\",\n  \"from\": \"0xa45D9DACBeA470CF93E8454aca5EcA4E62fB5FCf\",\n  \"nonce\": 246272,\n  \"gasLimit\": 500000,\n  \"gasPrice\": 48000000000,\n  \"data\": \"0xfa4b78b9000000000000000000000000000000000000000000000000000000001ed99549636194e69fe843f6a87463be5739921e03776a0d60288031fe6ded2148236f56000000000000000000000000a79b29ad7e0196c95b87f4663ded82fbf2e3add8\",\n  \"chainId\": 77,\n  \"value\": 0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{client}}/{{network}}/wallet/signTransaction",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "{{client}}",
+            "{{network}}",
+            "wallet",
+            "signTransaction"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": 0,\n  \"to\": \"0x5360DbFF3546b920431A20268D2B5DFf8bF9b4dD\",\n  \"from\": \"0xa45D9DACBeA470CF93E8454aca5EcA4E62fB5FCf\",\n  \"nonce\": 246272,\n  \"gasLimit\": 500000,\n  \"gasPrice\": 48000000000,\n  \"data\": \"0xfa4b78b9000000000000000000000000000000000000000000000000000000001ed99549636194e69fe843f6a87463be5739921e03776a0d60288031fe6ded2148236f56000000000000000000000000a79b29ad7e0196c95b87f4663ded82fbf2e3add8\",\n  \"chainId\": 77,\n  \"value\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/{{client}}/{{network}}/wallet/signTransaction",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "{{client}}",
+                "{{network}}",
+                "wallet",
+                "signTransaction"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "796"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"31c-keDTPf1Zoo+4Hd6qPSIxKE/QD9I\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 16 Jun 2023 14:40:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": {\n        \"type\": 0,\n        \"to\": \"0x5360DbFF3546b920431A20268D2B5DFf8bF9b4dD\",\n        \"nonce\": 246272,\n        \"gasLimit\": 500000,\n        \"gasPrice\": 48000000000,\n        \"data\": \"0xfa4b78b9000000000000000000000000000000000000000000000000000000001ed99549636194e69fe843f6a87463be5739921e03776a0d60288031fe6ded2148236f56000000000000000000000000a79b29ad7e0196c95b87f4663ded82fbf2e3add8\",\n        \"chainId\": 77,\n        \"value\": 0\n    },\n    \"signature\": \"0xf8ce8303c200850b2d05e0008307a120945360dbff3546b920431a20268d2b5dff8bf9b4dd80b864fa4b78b9000000000000000000000000000000000000000000000000000000001ed99549636194e69fe843f6a87463be5739921e03776a0d60288031fe6ded2148236f56000000000000000000000000a79b29ad7e0196c95b87f4663ded82fbf2e3add881bea00cedd99724121a403f154c0a2a321f1001d1db50c40f68d3b320752a8d8d8c06a06ac524178a1fec4f1f3c6067011db268ccb167765df74a73339f26938f72f3b1\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Wallet CREATE wallet",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "{{bearer}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"provider\": \"dfns\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{client}}/{{network}}/wallet/create",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "{{client}}",
+            "{{network}}",
+            "wallet",
+            "create"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Success with DFNS",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"provider\": \"dfns\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/{{client}}/{{network}}/wallet/create",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "{{client}}",
+                "{{network}}",
+                "wallet",
+                "create"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "101"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"65-kFYKNaX2/JyLoXGsSMPfLEZTczg\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 25 Jul 2023 11:13:13 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"address\": \"0x52d8ad9b283b45e52fa6e0f3967b927e59508a9d\",\n    \"walletId\": \"wa-7n54f-hicck-83t8l7etk1f1mr42\"\n}"
+        },
+        {
+          "name": "Success with Remote-custodial",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"provider\": \"remote-custodial\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/{{client}}/{{network}}/wallet/create",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "{{client}}",
+                "{{network}}",
+                "wallet",
+                "create"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "56"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"38-xTagYfxmnGU6Z9D+iqFGPFu09k8\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 25 Jul 2023 11:14:23 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"address\": \"0xC8Dac970c21230b9e6633AD38FB4297800B93E77\"\n}"
+        },
+        {
+          "name": "provider not allowed",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"provider\": \"remote-custodial\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/{{client}}/{{network}}/wallet/create",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "{{client}}",
+                "{{network}}",
+                "wallet",
+                "create"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "151"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"97-TyDxajyYgYn6gDZfjzfvR5LL/ig\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 25 Jul 2023 13:33:16 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"name\": \"API Error\",\n    \"code\": \"CUSTODY_GATEWAY.WRONG_PROVIDER\",\n    \"description\": \"Wrong provider value : 'remote-custodial' for this client \",\n    \"httpCode\": 400\n}"
+        },
+        {
+          "name": "User already have a wallet",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"provider\": \"dfns\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/{{client}}/{{network}}/wallet/create",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "{{client}}",
+                "{{network}}",
+                "wallet",
+                "create"
+              ]
+            }
+          },
+          "status": "Conflict",
+          "code": 409,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "135"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"87-K1TZPH6mKCFRkYaazkCYqPEuOA0\""
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 26 Jul 2023 07:27:16 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"name\": \"API Error\",\n    \"code\": \"CUSTODY_GATEWAY.USER_ALREADY_HAVE_A_WALLET\",\n    \"description\": \"This user already have a wallet\",\n    \"httpCode\": 409\n}"
+        }
+      ]
+    },
+    {
+      "name": "Wallet get wallet infos",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "{{bearer}}",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/{{client}}/{{network}}/wallet/infos",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "{{client}}",
+            "{{network}}",
+            "wallet",
+            "infos"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Wallet get wallet infos",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{bearer}}",
+                "type": "default"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/{{client}}/{{network}}/wallet/infos",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "{{client}}",
+                "{{network}}",
+                "wallet",
+                "infos"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "311"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"137-NWy122YEkA3qF5h2SQ9m4U6yEhk\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 27 Jul 2023 13:23:28 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"userId\": \"userId123\",\n    \"mnemonic\": \"U2FsdGVkX1+sVH2uKvWf7JZA4P+B49KQ+WeEJJSTfqJrXj+rFehd6jLcNqe56Z3FjTd9rYr4BfBtDUr1UFkYz7x0biaMuRU8tFwW7fEVsbGkYYWHL28j2FCpuwBcZt6S\",\n    \"signingClient\": \"testclient\",\n    \"address\": \"0x786e61722d149f16cdc47805ae9be60b6d1379ee\",\n    \"provider\": \"dfns\",\n    \"walletId\": \"wa-441di-tr457-8pjrfkgjjpaak1mv\"\n}"
+        }
+      ]
+    }
+  ]
+}

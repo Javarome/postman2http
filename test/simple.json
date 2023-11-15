@@ -1,0 +1,45 @@
+{
+  "info": {
+    "_postman_id": "0e05923c-6804-4ea9-b968-a5476f4xxxxx",
+    "name": "Shared",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "20169999"
+  },
+  "item": [
+    {
+      "name": "MY_REQUEST",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer xxx",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json; charset=utf-8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"some\": \"payload\"\n}"
+        },
+        "url": {
+          "raw": "https://somehost/some/path",
+          "protocol": "https",
+          "host": [
+            "somehost"
+          ],
+          "path": [
+            "",
+            "some",
+            "path"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
