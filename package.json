@@ -1,7 +1,7 @@
 {
   "name": "postman2http",
   "author": "Jérôme Beau <javarome@gmail.com> (https://javarome.com)",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "description": "Converts a Postman .json file to a JetBrains .http file",
   "main": "bin/index.js",
