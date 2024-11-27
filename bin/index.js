@@ -1,8 +1,9 @@
-"use strict"
-const fs = require("fs")
+#!/usr/bin/node
 
-const fileName = "test/Custodial Gateway.postman_collection.json"
-const postmanReqJson = fs.readFileSync(fileName)
+import fs from "fs"
+
+const fileName = process.argv[2]
+const postmanReqJson = fs.readFileSync(fileName, "utf-8")
 const postmanReq = JSON.parse(postmanReqJson)
 let httpReq = ""
 const items = postmanReq.item

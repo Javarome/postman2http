@@ -1,12 +1,22 @@
 {
   "name": "postman2http",
-  "version": "0.1.0",
+  "author": "Jérôme Beau <javarome@gmail.com> (https://javarome.com)",
+  "version": "0.2.0",
+  "type": "module",
   "description": "Converts a Postman .json file to a JetBrains .http file",
-  "main": "index.js",
+  "main": "bin/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "javarome@gmail.com",
-  "license": "ISC"
+  "bin": {
+    "postman2http": "bin/index.js"
+  },
+  "keywords": [
+    "jebtbrains",
+    "postman",
+    "http"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }

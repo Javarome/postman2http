@@ -1,0 +1,7 @@
+.idea/**/*
+.circleci/*
+jest*.*
+*.test.*
+**/*Test.*
+test/**/*
+src/**/*
